@@ -1,14 +1,28 @@
-# The official code for the metric framework PROBE
+# [WSDM'26] How Sharp and Bias-Robust is a Model? Dual Evaluation Perspectives on Knowledge Graph Completion
 
-PROBE directory consists of 4 models and an implementation file for PROBE
+This repository provides an implementation and adaptation of PROBE on existing models.
+
+## The overview of PROBE
+### Observation 1 & 2
+<p align="center">
+  <img src="figs/Obs1.png" width="330" height="200">
+  <img src="figs/Obs2.png" width="330" height="200">
+</p>
+
+### Experiments on FB15k-237 & WN18RR
+<p align="center">
+  <img src="figs/FB.png" width="330" height="260">
+  <img src="figs/WN.png" width="330" height="260">
+</p>
+
 
 ## 4 models
 The original source code for each model is as follows
 
-- [RotatE](https://github.com/DeepGraphLearning/KnowledgeGraphEmbedding)
-- [TuckEr](https://github.com/ibalazevic/TuckER)
-- [pLogicNet](https://github.com/DeepGraphLearning/pLogicNet)
-- [RNNLogic](https://github.com/DeepGraphLearning/RNNLogic)
+<span style="color:#0B3C49">●</span> RotatE [[Link](https://github.com/DeepGraphLearning/KnowledgeGraphEmbedding)]
+<span style="color:#1F9BCF">▼</span> TuckER [[Link](https://github.com/ibalazevic/TuckER)]
+<span style="color:#F39C6B">◆</span> pLogicNet [[Link](https://github.com/DeepGraphLearning/pLogicNet)]
+<span style="color:#E84A5F">⬟</span> RNNLogic [[Link](https://github.com/DeepGraphLearning/RNNLogic)]
 
 Since the original embedding dimensions were too large (up to 1000), we lacked the computational resources to run the models. Therefore, we standardized all embedding dimensions to 128, except for those that were already below this threshold, and re-tuned the corresponding hyperparameters.
 
